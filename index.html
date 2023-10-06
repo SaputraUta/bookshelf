@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookShelf Apps</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>BookShelf Apps</h1>
+    </header>
+
+    <div class="wrapper">
+      <div class="container bg-orange shadow" id="add-book">
+        <h2 class="container-header text-center">Tambahkan Buku</h2>
+        <form class="form" id="form" action="#">
+          <div class="form-group form-title">
+            <label for="title">Masukkan nama buku</label>
+            <input type="text" id="title" name="title" required />
+          </div>
+
+          <div class="form-group form-title">
+            <label for="author">Masukkan nama penulis</label>
+            <input type="text" id="author" name="author" required />
+          </div>
+
+          <div class="form-group form-title">
+            <label for="year">Masukkan tahun tersbit</label>
+            <input type="number" id="year" name="year" required />
+          </div>
+
+          <input
+            type="submit"
+            value="Submit"
+            name="Submit"
+            class="btn-submit"
+          />
+        </form>
+      </div>
+
+      <div class="container">
+        <h2 class="container-header text-center">Belum selesai dibaca</h2>
+        <div class="list-item" id="uncompleted-books"></div>
+      </div>
+
+      <div class="container">
+        <h2 class="container-header text-center">Selesai dibaca</h2>
+        <div class="list-item" id="completed-books"></div>
+      </div>
+    </div>
+
+    <div id="deleteDialogUnreaded" class="dialog">
+      <p>Anda yakin ingin menghapus data ini?</p>
+      <button id="confirmDeleteUnreaded">Ya</button>
+      <button id="cancelDeleteUnreaded">Tidak</button>
+    </div>
+
+    <div id="deleteDialogReaded" class="dialog">
+      <p>Anda yakin ingin menghapus data ini?</p>
+      <button id="confirmDeleteReaded">Ya</button>
+      <button id="cancelDeleteReaded">Tidak</button>
+    </div>
+
+    <div class="container-searching">
+      <h4>Cari Buku</h4>
+      <input
+        type="text"
+        name="searchField"
+        id="searchField"
+        placeholder="Masukkan nama buku"
+      />
+    </div>
+
+    <div id="snackbar"></div>
+
+    <script src="js/script.js" type="text/javascript"></script>
+  </body>
+</html>
