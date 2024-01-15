@@ -213,13 +213,15 @@ input[type="date"],
   z-index: 1000;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
   .wrapper {
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .wrapper .container {
+  .container {
     width: 100%;
+    margin: 8px 0;
   }
 
   .list-item {
@@ -228,8 +230,60 @@ input[type="date"],
 
   .form {
     width: 100%;
+    height: auto;
+  }
+
+  .container-searching {
+    width: 100%;
   }
 }
+
+@media only screen and (max-width: 599px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center; /* Menengahkan konten pada tampilan mobile */
+  }
+
+  .container {
+    width: 90%;
+    margin: 8px 0;
+  }
+
+  .list-item {
+    width: 100%; /* Menyesuaikan lebar item pada tampilan mobile */
+  }
+
+  .form {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item {
+    padding: 8px; /* Mengurangi padding untuk item buku pada tampilan mobile */
+  }
+
+  .inner {
+    padding: 8px;
+    text-align: center;
+  }
+
+  .check-button,
+  .trash-button,
+  .undo-button {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .bookTitle {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .inner p {
+    font-size: 14px;
+  }
+}
+
 
 #snackbar {
   visibility: hidden;
