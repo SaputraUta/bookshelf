@@ -179,6 +179,7 @@ input[type="date"],
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
   width: fit-content;
   flex-direction: row;
   border-radius: 10px;
@@ -219,9 +220,15 @@ input[type="date"],
     align-items: center;
   }
 
-  .container {
-    width: 100%;
-    margin: 8px 0;
+  .wrapper .container {
+    width: 799px;
+    border-radius: 10px;
+    margin: 8px;
+    background: #f8f9fa;
+    padding: 16px;
+    flex-grow: 1;
+    min-height: 500px;
+    height: fit-content;
   }
 
   .list-item {
@@ -238,40 +245,38 @@ input[type="date"],
   }
 }
 
+@media only screen and (max-width: 799px) {
+  .wrapper .container {
+    width: 600px;
+    border-radius: 10px;
+    margin: 8px;
+    background: #f8f9fa;
+    padding: 16px;
+    flex-grow: 1;
+    min-height: 500px;
+    height: fit-content;
+  }
+  .list-item {
+    width: 100%;
+  }
+
+}
+
 @media only screen and (max-width: 599px) {
   .wrapper {
     flex-direction: column;
     align-items: center; /* Menengahkan konten pada tampilan mobile */
   }
 
-  .container {
-    width: 90%;
-    margin: 8px 0;
-  }
-
-  .list-item {
-    width: 100%; /* Menyesuaikan lebar item pada tampilan mobile */
-  }
-
-  .form {
-    width: 100%;
-    height: auto;
-  }
-  
-  .item {
-    padding: 8px; /* Mengurangi padding untuk item buku pada tampilan mobile */
-  }
-
-  .inner {
-    padding: 8px;
-    text-align: center;
-  }
-
-  .check-button,
-  .trash-button,
-  .undo-button {
-    width: 100%;
-    margin-top: 8px;
+  .wrapper .container {
+    width: 400px;
+    border-radius: 10px;
+    margin: 8px;
+    background: #f8f9fa;
+    padding: 16px;
+    flex-grow: 1;
+    min-height: 500px;
+    height: fit-content;
   }
 
   .bookTitle {
@@ -279,8 +284,43 @@ input[type="date"],
     margin-bottom: 8px;
   }
 
+  .list-item {
+    width: 100%;
+  }
+
   .inner p {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 399px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center; /* Menengahkan konten pada tampilan mobile */
+  }
+
+  .wrapper .container {
+    width: 300px;
+    border-radius: 10px;
+    margin: 8px;
+    background: #f8f9fa;
+    padding: 16px;
+    flex-grow: 1;
+    min-height: 500px;
+    height: fit-content;
+  }
+
+  .bookTitle {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .list-item {
+    width: 100%;
+  }
+
+  .inner p {
+    font-size: 10px;
   }
 }
 
